@@ -1,0 +1,30 @@
+{
+    "name": "front-pr3",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start:store": "node servers/userServer.js",
+        "start:admin": "node servers/server.js",
+        "start": "concurrently \"npm run start:store\" \"npm run start:admin\"",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "apollo-server-express": "^3.13.0",
+        "cors": "^2.8.5",
+        "express": "^4.21.2",
+        "express-graphql": "^0.12.0",
+        "fs": "^0.0.1-security",
+        "graphql": "^16.10.0",
+        "swagger-jsdoc": "^6.2.8",
+        "swagger-ui-express": "^5.0.1",
+        "ws": "^8.18.1",
+        "yamljs": "^0.3.0"
+    },
+    "devDependencies": {
+        "concurrently": "^9.1.2"
+    }
+}
