@@ -31,11 +31,11 @@
           
           try {
               // Отправляем POST-запрос на GraphQL эндпоинт
-              const response = await fetch('http://localhost:3000/graphql', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ query })
-              });
+              const response = await fetch('/graphql', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query })
+                });
               
               const result = await response.json();
               const products = result.data.products;
